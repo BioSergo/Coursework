@@ -67,7 +67,7 @@ def get_sequence(id):
         f.seek(info['position'])
 
         seq = []
-        for _ in range(info['str_num']):
+        for i in range(info['str_num']):
              flow = f.readline().strip()
              seq.append(flow)
              result = "".join(seq)
@@ -87,7 +87,7 @@ print(f'protein_rn: {get_sequence('WP_010889582.1')}') #Случайный
 print(f'protein_last: {get_sequence('WP_415577435.1')}') #Последний
 
 # из GCA_020484125.1_ASM2048412v1_genomic.fna(Fasta)
-print(f'genomic_last: {get_sequence('MZ326863.1')}')
+print(f'genomic: {get_sequence('MZ326863.1')}')
 
 # из Phage_Lily.fna и Phage_Lishaka.fna(Fasta)
 print(f'complete genome phage1: {get_sequence('NC_028841.1:1-120')}')
